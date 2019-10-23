@@ -1,0 +1,35 @@
+body{
+    color: rgb(200,200,200);
+    font-family: 'Titillium Web';
+    font-weight: 400;
+    background-color: rgb(25,35,45);
+}
+
+.jumbotron{
+	background-color: lightskyblue;
+	margin-bottom: 0;
+}
+
+.container{
+	height: 100vh;
+	widows: 100vw;
+}
+
+.jumbotron h1{
+	font-size: 30px;
+	font-weight: 500;
+	color: white;
+}
+
+.row p{
+	margin: auto;
+	font-weight: 500;
+	font-size: 30px;
+	color: white;
+}
+
+#weather-form{
+	margin: auto;
+	text-align: center;
+	width: 30%;
+}
