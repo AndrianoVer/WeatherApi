@@ -4,18 +4,13 @@ $(document).ready(function() {
 	
 	if(city != '') {
 
-		$.ajax({
+		$.ajax('http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + 
+				 "&APPID=a8eb3bb7297afc2d6356acc7f8cff8fe").done(function(resp) {
+					 let temp = resp.weather.main;
+					 console.log(resp.timezone)
+				 })
 
-			url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + 
-				 "&APPID=a8eb3bb7297afc2d6356acc7f8cff8fe",
-			type: "GET",
-			dataType: "jsonp",
-			success: function(data){
-				console.log(data);
-			}
-		});
-
-		}else{
+	} else{
 			$('#error').html('Введите название города');
 		}
 	});

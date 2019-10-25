@@ -38,3 +38,15 @@ body{
 	font-size: 30px;
 	color: white;
 }
+
+.card-wrapper{
+    position: relative;
+    margin: auto;
+    overflow: visible;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
