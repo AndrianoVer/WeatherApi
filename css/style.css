@@ -10,8 +10,6 @@ body{
 	margin-bottom: 0;
 }
 
-
-
 .container{
 	height: 100vh;
 	widows: 100vw;
@@ -34,4 +32,9 @@ body{
 	margin: auto;
 	text-align: center;
 	width: 30%;
+}
+
+#error{
+	font-size: 30px;
+	color: white;
 }
