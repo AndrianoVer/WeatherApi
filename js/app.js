@@ -1,12 +1,14 @@
 $(document).ready(function() {
+	let hiddenCardWrapper = document.querySelector(".card-wrapper").setAttribute("hidden", "");
 	$('#submit-weather').click(function(){
-		let city = $('#city').val();		
+		document.querySelector(".card-wrapper").removeAttribute("hidden");
+		let city = $('#city').val();
 	
 	if(city != '') {
 
 		$.ajax('http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + 
 			"&APPID=a8eb3bb7297afc2d6356acc7f8cff8fe").done(function(resp) {
-				const temp = resp.main.temp;
+				const temp = Math.floor(resp.main.temp);
 				const timeSunrise = new Date(resp.sys.sunrise * 1000);
 				const timeSunset = new Date(resp.sys.sunset * 1000);
 				const sunrise_Hour = timeSunrise.getHours() + 'h';
