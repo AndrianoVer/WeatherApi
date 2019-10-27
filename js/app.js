@@ -16,17 +16,24 @@ $(document).ready(function() {
 				const sunset_Hour = timeSunset.getHours() + 'h';
 				const sunset_Min = timeSunset.getMinutes() + 'min';
 				const sunriseMain = sunrise_Hour + ' ' + sunrise_Min;
-				const sunsetMain = sunset_Hour + ' ' + sunset_Min;				
+				const sunsetMain = sunset_Hour + ' ' + sunset_Min;
+				console.log(resp);				
 				$(".card-lviv .card-temp").text(temp);
 				$(".card-header").text(city);
 				$(".card-info-sunrise").text(sunriseMain);			 
-				$(".card-info-sunset").text(sunsetMain);			 
+				$(".card-info-sunset").text(sunsetMain);
+			if (resp.weather[0].main = 'Clear') {
+				console.log('Солнечно!');
+			} else if (resp.weather[0].main = 'Rain') {
+				console.log('Дождь!');
+			} else {
+				
+			}
+							 
 			});
 				 
 	} else{
 			$('#error').html('Введите название города');
-		}
+		}		
 	});
 });
-
-

@@ -135,12 +135,36 @@ body{
     font-size: 1.25em;
 }
 
-.weather-pic{	
+.weather-pic-clear{	
 	margin: auto;
 	margin-bottom: 5px;
 	width: 100px;
 	height: 100px;
 	background-image: url(../img/sun.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;	
+	position: relative;
+}
+
+.weather-pic-rain{	
+	margin: auto;
+	margin-bottom: 5px;
+	width: 100px;
+	height: 100px;
+	background-image: url(../img/rain.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;	
+	position: relative;
+}
+
+.weather-pic-cloudy{	
+	margin: auto;
+	margin-bottom: 5px;
+	width: 100px;
+	height: 100px;
+	background-image: url(../img/cloudy.svg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;	
