@@ -1,5 +1,9 @@
 $(document).ready(function() {
 	let hiddenCardWrapper = document.querySelector(".card-wrapper").setAttribute("hidden", "");
+	let hiddenSun = document.querySelector(".weather-pic-clear").setAttribute("hidden", "");
+	let hiddenRain = document.querySelector(".weather-pic-rain").setAttribute("hidden", "");
+	let hiddenCloud = document.querySelector(".weather-pic-cloudy").setAttribute("hidden", "");
+	
 	$('#submit-weather').click(function(){
 		document.querySelector(".card-wrapper").removeAttribute("hidden");
 		let city = $('#city').val();
@@ -22,15 +26,24 @@ $(document).ready(function() {
 				$(".card-header").text(city);
 				$(".card-info-sunrise").text(sunriseMain);			 
 				$(".card-info-sunset").text(sunsetMain);
-			if (resp.weather[0].main = 'Clear') {
-				console.log('Солнечно!');
-			} else if (resp.weather[0].main = 'Rain') {
-				console.log('Дождь!');
-			} else {
-				
-			}
-							 
-			});
+
+				switch (resp.weather[0].main) {
+					case 'Clear':
+						document.querySelector(".weather-pic-clear").removeAttribute("hidden");
+					break;
+					case 'Rain':
+						document.querySelector(".weather-pic-rain").removeAttribute("hidden");
+					break;
+					case 'Clouds':
+						document.querySelector(".weather-pic-cloudy").removeAttribute("hidden");
+					break;
+					case 'Mist':
+						document.querySelector(".weather-pic-mist").removeAttribute("hidden");
+					break;
+					default:
+						alert ('Лучше взять зонт!');					
+				}							 
+		});
 				 
 	} else{
 			$('#error').html('Введите название города');
