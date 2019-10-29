@@ -3,10 +3,13 @@ $(document).ready(function() {
 	let hiddenSun = document.querySelector(".weather-pic-clear").setAttribute("hidden", "");
 	let hiddenRain = document.querySelector(".weather-pic-rain").setAttribute("hidden", "");
 	let hiddenCloud = document.querySelector(".weather-pic-cloudy").setAttribute("hidden", "");
+	let hiddenMist = document.querySelector(".weather-pic-mist").setAttribute("hidden", "");
 	
 	$('#submit-weather').click(function(){
 		document.querySelector(".card-wrapper").removeAttribute("hidden");
 		let city = $('#city').val();
+		
+
 	
 	if(city != '') {
 
@@ -42,7 +45,8 @@ $(document).ready(function() {
 					break;
 					default:
 						alert ('Лучше взять зонт!');					
-				}							 
+				}	
+										 
 		});
 				 
 	} else{

@@ -78,6 +78,14 @@ body{
     text-shadow: 0 5px 5px rgb(25,35,45);
 }
 
+.sunrise-box .sunrise{
+	margin-bottom: 0;
+}
+
+.sunrise-box .sunset{
+	margin-bottom: 0;
+}
+
 .card:hover{
     box-shadow: 0 0 20px 10px rgb(5,15,25);
     z-index: 2;
