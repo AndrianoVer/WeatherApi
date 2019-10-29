@@ -195,13 +195,6 @@ body{
     content: "\00B0";
 }
 
-.icon{
-    margin-top: 50px;
-    display:flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
 .anim-flip{
     animation-name: flip;
     animation-duration: 1s;
