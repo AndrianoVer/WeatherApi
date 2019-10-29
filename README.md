@@ -3,5 +3,13 @@
 
 <p>This is an app for check weather in your city!</p>
 <p>All you need is just follow this link: <h3><a href="https://andrianover.github.io/WeatherApi/index.html">WeatherApiForYourCity</a></h3>
+
+#### Used libraries:
+* jQuery-v3.4.1.
+* Bootstrap-v4.3.1
+
+Developed By
+-------
+Andrew Verbitsky (AndrianoVer)
   
 
