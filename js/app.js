@@ -13,7 +13,7 @@ $(document).ready(function() {
 	
 	if(city != '') {
 
-		$.ajax('http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + 
+		$.ajax('https://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=metric" + 
 			"&APPID=a8eb3bb7297afc2d6356acc7f8cff8fe").done(function(resp) {
 				const temp = Math.floor(resp.main.temp);
 				const timeSunrise = new Date(resp.sys.sunrise * 1000);
